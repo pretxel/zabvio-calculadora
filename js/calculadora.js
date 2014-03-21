@@ -23,11 +23,11 @@ $( document ).ready(function() {
    	txtModalidad = $("#textModalidad").val();
       txtModalidad =parseFloat($("#textModalidad").val());
 
-      
-
-
+    
       htmlTable = '';
       
+      modalidad = 1;
+      tipo = 1;
 
    	//Modalidad con tasa de interes
    	if (modalidad == 1){
@@ -214,8 +214,8 @@ $( document ).ready(function() {
          $( "#meses" ).val("");
          $( "#monto" ).val("");
          $("#textModalidad").val("");
-         $("#labelModalidad").hide();
-         $("#textModalidad").hide();
+         // $("#labelModalidad").hide();
+         // $("#textModalidad").hide();
          $("#canvas").hide();
          $("#resultado").hide();
          $("#container").hide();
