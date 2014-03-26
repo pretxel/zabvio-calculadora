@@ -7,7 +7,9 @@
 /* Función que calcula los pagos fijos que tiene que cubrir mensualmente */
 /* La formular empleada es R = (A * i) / (1 - (1 + i)^-n)  */
 function interesSimple(monto, meses, tasa){
-  return (monto * tasa) / (1 - Math.pow((1 + tasa), -1 * meses)); 
+    var iva = 0.16;
+    var tasaNueva = (tasa * iva) + tasa;
+  return (monto * tasaNueva) / (1 - Math.pow((1 + tasaNueva), -1 * meses)); 
 }
 
 function interesCompuesto(){
@@ -84,7 +86,7 @@ function graficaChartjs(labels_graf, array_pago, array_capital, array_interes){
 }
 
 /* Funcion para Graficar los pagos con hightchart*/
-function graficaHighchart(labels_graf, array_pago, array_capital, array_interes){
+function graficaHighchart(labels_graf, array_pago, array_capital, array_interes, array_iva){
 
 	$('#container').highcharts({
             chart: {
@@ -130,6 +132,10 @@ function graficaHighchart(labels_graf, array_pago, array_capital, array_interes)
             }, {
                 name: 'Interes',
                 data: array_interes
+    
+            }, {
+                name: 'Iva',
+                data: array_iva
     
             }]
         });

@@ -8,6 +8,7 @@ $( document ).ready(function() {
    var labels_graf = new Array();
    var array_capital = new Array();
    var array_interes = new Array();
+   var array_iva = new Array();
    var array_pago = new Array();
    var NO_IMPL = "Funcionalidad no Implementada";
 
@@ -15,6 +16,9 @@ $( document ).ready(function() {
    init();
 
    $("#ok").click(function() {
+
+
+
 
    	tipo  = $( "#tipo" ).val();
    	modalidad = $( "#modalidad" ).val();
@@ -35,10 +39,15 @@ $( document ).ready(function() {
          var tasa_interes = txtModalidad / 100.00 ;
    		if (tipo == 1){
 
+          array_pago = new Array();
+          array_capital= new Array();
+          array_interes= new Array();
+          array_iva= new Array();
+          
             var monto_men = interesSimple(monto, meses, tasa_interes); 
    			var tabla = $("#tabla");
    			tabla.empty();
-            htmlTable = "<thead><tr><th>Mes</th><th>Capital</th><th>Interes</th><th>Pago Mensual</th><th class='visible-sm visible-md visible-lg'>Saldo</th></tr></thead>";
+            htmlTable = "<thead><tr><th>Mes</th><th>Capital</th><th>Interes</th><th class='visible-sm visible-md visible-lg'>Iva</th><th>Pago Mensual</th><th class='visible-sm visible-md visible-lg'>Saldo</th></tr></thead>";
    			//tabla.append("<thead><tr><th>Mes</th><th>Capital</th><th>Interes</th><th>Pago Mensual</th><th>Saldo</th></tr></thead>");
 
             //tabla.append("<tbody>");
@@ -46,6 +55,7 @@ $( document ).ready(function() {
    			for(var i=0; i< meses; i++){
    				interes_mes = Math.round((monto * tasa_interes)*100) / 100;
                capital_mes = Math.round((monto_men - interes_mes) *100) / 100;
+               iva_mes = interes_mes * 0.16;
                monto -= capital_mes;
 
                //Se Trunca el saldo final a 0
@@ -56,8 +66,9 @@ $( document ).ready(function() {
                //Agrego datos al Array
                array_capital[i] = capital_mes;
                array_interes[i] = interes_mes;
+               array_iva[i] = iva_mes
                array_pago[i] = monto_men;
-               htmlTable = htmlTable + "<tr><td>"+(i+1)+"</td><td>$"+ capital_mes + "</td><td>$"+ interes_mes +"</td><td>$"+ Math.round(monto_men*100) /100 +"</td><td class='visible-sm visible-md visible-lg'>$"+Math.round(monto*100) /100+"</td></tr>";
+               htmlTable = htmlTable + "<tr><td>"+(i+1)+"</td><td>$"+ capital_mes + "</td><td>$"+ interes_mes +"</td><td class='visible-sm visible-md visible-lg'>$"+Math.round(iva_mes*100) /100 +"</td><td>$"+ Math.round(monto_men*100) /100 +"</td><td class='visible-sm visible-md visible-lg'>$"+Math.round(monto*100) /100+"</td></tr>";
    				//tabla.append("<tr><td>"+(i+1)+"</td><td>$"+ capital_mes + "</td><td>$"+ interes_mes +"</td><td>$"+ Math.round(monto_men*100) /100 +"</td><td>"+Math.round(monto*100) /100+"</td></tr>");
    			   labels_graf[i] = "Mes " + (i+1);
             }
@@ -77,6 +88,8 @@ $( document ).ready(function() {
             $("#tabla").show();
             $("#container").hide();
             $("#resultado").show();
+            $("#botonGrafico").show();
+         $("#botonTabla").show();
            
    		}
    		//Tipo Compuesto
@@ -175,7 +188,7 @@ $( document ).ready(function() {
       //graficaChartjs(labels_graf,array_pago,array_capital,array_interes);
       
       //Grafica con Hightchart.js
-      graficaHighchart(labels_graf,array_pago,array_capital,array_interes);
+      graficaHighchart(labels_graf,array_pago,array_capital,array_interes,array_iva);
 
     });
 
@@ -209,6 +222,7 @@ $( document ).ready(function() {
       array_capital = new Array();
       array_interes = new Array();
       array_pago = new Array();
+      array_iva = new Array();
          $( "#tipo" ).val("");
          $( "#modalidad" ).val("");
          $( "#meses" ).val("");
@@ -220,6 +234,9 @@ $( document ).ready(function() {
          $("#resultado").hide();
          $("#container").hide();
          $("#tasaInt").hide();
+         $("#botonGrafico").hide();
+         $("#botonTabla").hide();
+
      }
 
 
