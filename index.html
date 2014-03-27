@@ -57,19 +57,34 @@
 <!-- <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
   Launch demo modal
 </button> -->
- 				<form role="form">
+<div class="calculator">
+	<div class="screen">
+		<label for="exampleInputEmail1">Monto</label>
+    <input id="monto" class="form-control" type="number" min="0" placeholder="Monto" required></div>
+    <div class="screen">
+    	<label for="exampleInputEmail1" id="labelModalidad">Tasa de interés (%)</label>
+    <input type="number"class="form-control" id="textModalidad" min="0" placeholder="Tasa de interés" required></div>
+        <input type="hidden" value="" class="outcome" />
+        <ul class="buttons">
+            <!-- <li class="clear" id="tresMes"><a>3 meses</a></li> -->
+            <li><a href="#" id="tresMes" name="alternate" class="val">3 meses</a></li>
+            <li><a href="#" id="seisMes" name="alternate" class="val">6 meses</a></li>
+            <li><a href="#" id="doceMes" name="alternate" class="val">12 meses</a></li>
+            <li><a href="#" id="limpiar"  class="val">C</a></li>    
+            
+            <li><a href="#" class="val">+</a></li>
+            <li><a href="#" id="ok" class="val wide shift">Calcular</a></li>
+            
+        </ul>
+</div>
+
+
+ 				<!-- <form role="form">
   <div class="form-group">
     <label for="exampleInputEmail1">Monto</label>
     <input id="monto" class="form-control" type="number" min="0" placeholder="Monto" required>
   </div>
-<!--   <div class="form-group">
-    <label for="exampleInputPassword1">Modalidad</label>
-    <select id="modalidad" class="form-control" required>
-				<option value="">Selecciona</option>
-				<option value="1">Tasa de Interes</option>
-				<option value="2">Monto Mensual</option>
-			</select>
-  </div> -->
+
 
 
    <div class="form-group">
@@ -77,14 +92,6 @@
     <input type="number"class="form-control" id="textModalidad" min="0" placeholder="Tasa de interés" required>
   </div>
 
- <!--  <div class="form-group">
-    <label for="exampleInputFile">Tipo de crédito</label>
-    <select id="tipo" class="form-control" required>
-				<option value="">Selecciona Tipo de crédito</option>
-				<option value="1">Simple</option>
-				<option value="2">Compuesto</option>
-	</select>
-  </div> -->
   <div class="form-group">
     <label for="exampleInputFile">Meses</label>
     <select id="meses" class="form-control"  required>
@@ -93,12 +100,17 @@
 				<option value="6">6 meses</option>
 				<option value="12">12 meses</option>
 			</select>
+	<button class="btn btn-info" script="return(false);">3 meses</button>
+	<button class="btn btn-danger" script="return(false);">6 meses</button>
+	<button class="btn btn-warning" script="return(false);">12 meses</button>
   </div>
-  <!-- <a href="#resultado"> -->
+ 
   <button type="submit" id="ok"  class="btn btn-info" script="return(false);">Calcular</button>
- <!--  </a> -->
+ 
   <button id="limpiar" class="btn btn-info">Limpiar</button>
-</form></div>
+</form> -->
+
+</div>
 			<div class="col-xs-12 col-sm-5 col-md-5">
 
 				<div class="scrollblock" id="resultado">

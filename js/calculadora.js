@@ -22,12 +22,22 @@ $( document ).ready(function() {
 
    	tipo  = $( "#tipo" ).val();
    	modalidad = $( "#modalidad" ).val();
-   	meses =$( "#meses" ).val();
+   	//meses =$( "#meses" ).val();
    	monto = $( "#monto" ).val();
    	txtModalidad = $("#textModalidad").val();
       txtModalidad =parseFloat($("#textModalidad").val());
 
     
+      // alert($("#tresMes").attr("name"));
+
+      if ($("#tresMes").attr("name") == "1"){
+        meses = 3;
+      }else if ($("#seisMes").attr("name") == "1") {
+        meses = 6;
+      }else {
+        meses = 12;
+      }
+
       htmlTable = '';
       
       modalidad = 1;
@@ -217,6 +227,42 @@ $( document ).ready(function() {
      });
 
 
+      $("#doceMes").click(function() {
+        // alert("12 meses");
+        $("#doceMes").css("background-image","-webkit-linear-gradient(top, #FF0202 0%, #FF2020 40%, #FF0000 100%");
+        $("#doceMes").attr("name","1");
+          
+        //background-image: -webkit-linear-gradient(top, #FF0202 0%, #FF2020 40%, #FF0000 100%);
+        $("#tresMes").css("background-image","-webkit-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%");
+        $("#seisMes").css("background-image","-webkit-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%");
+        //background-image: -webkit-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
+         $("#tresMes").attr("name","0");
+        $("#seisMes").attr("name","0");
+      });
+
+      $("#tresMes").click(function() {
+        // alert("12 meses");
+        $("#tresMes").css("background-image","-webkit-linear-gradient(top, #FF0202 0%, #FF2020 40%, #FF0000 100%");
+        $("#tresMes").attr("name","1");  
+        //background-image: -webkit-linear-gradient(top, #FF0202 0%, #FF2020 40%, #FF0000 100%);
+        $("#docesMes").css("background-image","-webkit-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%");
+        $("#seisMes").css("background-image","-webkit-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%");
+        $("#docesMes").attr("name","0");
+        $("#seisMes").attr("name","0");
+      });
+
+      $("#seisMes").click(function() {
+        // alert("12 meses");
+        $("#seisMes").css("background-image","-webkit-linear-gradient(top, #FF0202 0%, #FF2020 40%, #FF0000 100%");
+        $("#seisMes").attr("name","1");  
+        //background-image: -webkit-linear-gradient(top, #FF0202 0%, #FF2020 40%, #FF0000 100%);
+        $("#doceMes").css("background-image","-webkit-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%");
+        $("#tresMes").css("background-image","-webkit-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%");
+        $("#doceMes").attr("name","0");
+        $("#tresMes").attr("name","0");
+      });
+
+
      function init(){
       labels_graf = new Array();
       array_capital = new Array();
@@ -237,6 +283,9 @@ $( document ).ready(function() {
          $("#botonGrafico").hide();
          $("#botonTabla").hide();
 
+         $("#doceMes").css("background-image","-webkit-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%");
+        $("#tresMes").css("background-image","-webkit-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%");
+          $("#seisMes").css("background-image","-webkit-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%");
      }
 
 
