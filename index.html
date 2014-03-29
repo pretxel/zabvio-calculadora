@@ -16,7 +16,64 @@
 <link rel="stylesheet" href="css/normalize.css" type="text/css">
 <link rel="stylesheet" href="css/estilos.css">
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/jquery.screwdefaultbuttonsV2.js"></script>
+<script type="text/javascript">
+    $(function(){
+    
+      $('input:radio').screwDefaultButtons({
+        image: 'url("img/radioSmall.jpg")',
+        width: 49,
+        height: 49,
 
+      });
+      
+      $('input:checkbox').screwDefaultButtons({
+        image: 'url("img/checkboxSmall.jpg")',
+        width: 49,
+        height: 49
+      });
+
+      
+    
+    });
+  </script>
+  
+  <style>
+  
+    body {
+      font-family: tahoma, ariel, sans-serif;
+      letter-spacing: 0.1em;
+      color: #FFF;
+    }
+    
+    .styledRadio, .styledCheckbox {
+      display: inline-block;
+      border: 3px solid rgb(0, 0, 0);
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+    }
+    
+    
+    .example {
+      padding: 50px 0 0 20px;
+      width: 200px;
+    }
+    
+    label {
+      line-height: 43px;
+      font-size: 20px;
+      vertical-align: 14px;
+      padding-right: 20px;
+    }
+    
+    button{
+      display: block;
+    }
+  
+  </style>
 </head>
 
 <body>
@@ -66,17 +123,33 @@
     <input type="number"class="form-control" id="textModalidad" min="0" placeholder="Tasa de interés" required></div>
         <input type="hidden" value="" class="outcome" />
         <ul class="buttons">
-            <!-- <li class="clear" id="tresMes"><a>3 meses</a></li> -->
+            <!-- <li class="clear" id="tresMes"><a>3 meses</a></li> 
             <li><a href="#" id="tresMes" name="alternate" class="val">3 meses</a></li>
             <li><a href="#" id="seisMes" name="alternate" class="val">6 meses</a></li>
-            <li><a href="#" id="doceMes" name="alternate" class="val">12 meses</a></li>
-            <li><a href="#" id="limpiar"  class="val">C</a></li>    
+            <li><a href="#" id="doceMes" name="alternate" class="val">12 meses</a></li>-->
+              <div class="example">
+ 
+    
+    <input type="radio" name="ex1" id="ex1_a">
+    <label for="ex1_a">3 meses</label>
+    
+    <input type="radio" name="ex1" id="ex1_b">
+    <label for="ex1_b">6 meses</label>
+    
+    <input type="radio" name="ex1" id="ex1_c">
+    <label for="ex1_c">12 meses</label>
+    
+  </div>
+
+
+           <!-- <li><a href="#" id="limpiar"  class="val">C</a></li>    
             
-            <li><a href="#" class="val">+</a></li>
-            <li><a href="#" id="ok" class="val wide shift">Calcular</a></li>
+            <li><a href="#" class="val">+</a></li> -->
+            <a href="#" id="ok" class="val wide shift">Calcular</a>
             
         </ul>
 </div>
+
 
 
  				<!-- <form role="form">
@@ -84,7 +157,7 @@
     <label for="exampleInputEmail1">Monto</label>
     <input id="monto" class="form-control" type="number" min="0" placeholder="Monto" required>
   </div>
-
+<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 
 
    <div class="form-group">
@@ -267,8 +340,7 @@
 
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script>window.jQuery | document.write('<script src="js/jquery-1.11.0.js"><\/script>')</script>
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/Chart.js"></script>
@@ -283,6 +355,7 @@
 <script src="js/jquery.scrollorama.js"></script>
 <script src="js/animationTool.js"></script> 
 <script src="http://t2.trackalyzer.com/trackalyze.js"></script>
+
 
 
 <script>

@@ -20,8 +20,8 @@ body{
 	}
 
 header{
+	width: 110%;
 	background-image:url(../img/bnner.png);
-	width:100%;
 	display:inline-block;
 	text-align:center;
 	}
@@ -138,6 +138,17 @@ background: -webkit-linear-gradient(top, rgba(44,199,106,1) 0%, rgba(44,199,106,
 	}
 */	
 @media only screen and (max-width:700px){
+
+
+	.calculator{
+
+	width: 410px;
+}
+
+.screen{
+	width: 345px;
+}
+
 	h2{
 		font-size: 20px;
 	}
@@ -154,11 +165,26 @@ background: -webkit-linear-gradient(top, rgba(44,199,106,1) 0%, rgba(44,199,106,
 		width: 30px;
 	}
 
+	
+
 }
 
 
+/*
+@media only screen and (max-width:500px){
+.calculator{
+
+	width: 410px;
+}
+
+.screen{
+	width: 345px;
+}
+
+}*/
+
 .calculator {
-    width:480px;
+    width:95%;
     height:auto;
     padding:10px 0;
     margin: auto;
@@ -170,19 +196,19 @@ background: -webkit-linear-gradient(top, rgba(44,199,106,1) 0%, rgba(44,199,106,
      box-shadow:rgba(0,0,0,0.4) 0px 2px 5px, inset rgba(255,255,255,0.9) 0px 1px 1px -1px;
      -webkit-box-shadow:rgba(0,0,0,0.4) 0px 2px 5px, inset rgba(255,255,255,0.9) 0px 1px 1px -1px;
      -moz-box-shadow:rgba(0,0,0,0.4) 0px 2px 5px, inset rgba(255,255,255,0.9) 0px 1px 1px -1px;
-     background-image:-moz-linear-gradient(top, #333333, #1f1f1f);
-      background-image:-webkit-linear-gradient(top, #333333, #1f1f1f);
-       background-image:linear-gradient(top, #333333, #1f1f1f);
+     background-image:-moz-linear-gradient(top, #034964, #034964);
+      background-image:-webkit-linear-gradient(top, #034964, #034964);
+       background-image:linear-gradient(top, #034964, #034964);
      overflow: hidden;
      text-align: center;
 }
 
 .screen {
-     width:424px;
-     height:93px;
+     width:90%;
+     /*height:93px;*/
     margin: 12px auto 30px;
      padding:15px 20px;
-     color:#c0c0c0;
+     color:#FFFFFF;
      text-align: right;
      /*font-size: 3em;*/
      letter-spacing: 3px;
@@ -194,9 +220,9 @@ background: -webkit-linear-gradient(top, rgba(44,199,106,1) 0%, rgba(44,199,106,
      box-shadow:inset rgba(0,0,0,1) 0px 1px 4px, inset rgba(225,225,225,0.3) 0px -2px 4px -2px;
      -webkit-box-shadow:inset rgba(0,0,0,1) 0px 1px 4px, inset rgba(225,225,225,0.3) 0px -2px 4px -2px;
      -moz-box-shadow:inset rgba(0,0,0,1) 0px 1px 4px, inset rgba(225,225,225,0.3) 0px -2px 4px -2px;
-     background-image: -moz-linear-gradient(top, #3e3e3e 0%, #303030 100%);
-      background-image: -webkit-linear-gradient(top, #3e3e3e 0%, #303030 100%);
-      background-image: linear-gradient(top, #3e3e3e 0%, #303030 100%);
+     background-image: -moz-linear-gradient(top, #156E91 0%, #156E91 100%);
+      background-image: -webkit-linear-gradient(top, #156E91 0%, #156E91 100%);
+      background-image: linear-gradient(top, #156E91 0%, #156E91 100%);
      -moz-box-sizing:border-box;
      -webkit-box-sizing:border-box;
      box-sizing:border-box;
@@ -225,7 +251,7 @@ background: -webkit-linear-gradient(top, rgba(44,199,106,1) 0%, rgba(44,199,106,
      width:95px;
      height:68px;
      padding:18px 0 12px;
-     color:#c0c0c0 !important;
+     color:#FFFFFF !important;
      font-family: "Myriad Pro", Arial, sans-serif;
      font-size:1.6em;
      font-weight: 500;
@@ -241,9 +267,9 @@ background: -webkit-linear-gradient(top, rgba(44,199,106,1) 0%, rgba(44,199,106,
      box-shadow: inset rgba(255,255,255,0.1) 0px 1px 0px, inset rgba(0,0,0,0.2) 0px -2px 2px;
      -webkit-box-shadow: inset rgba(255,255,255,0.1) 0px 1px 0px, inset rgba(0,0,0,0.2) 0px -2px 2px;
      -moz-box-shadow: inset rgba(255,255,255,0.1) 0px 1px 0px, inset rgba(0,0,0,0.2) 0px -2px 2px;
-    background-image:-moz-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
-      background-image:-webkit-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
-       background-image:linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
+    background-image:-moz-linear-gradient(top, #30e5d9 0%, #2cb3ba 40%, #30e5d9 100%);
+      background-image: -webkit-linear-gradient(top, #30e5d9 0%, #2cb3ba 40%, #30e5d9 100%);
+       background-image:linear-gradient(top, #30e5d9 0%, #2cb3ba 40%, #30e5d9 100%);
      -moz-box-sizing:border-box;
      -webkit-box-sizing:border-box;
      box-sizing:border-box;
@@ -280,3 +306,11 @@ background: -webkit-linear-gradient(top, rgba(44,199,106,1) 0%, rgba(44,199,106,
  background-image: -webkit-radial-gradient( 9px -4px, #FFF 0px, #fff 2px, rgba(255,255,255,0) 4px), -webkit-linear-gradient(bottom, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
  background-image: radial-gradient( 9px -4px, #FFF 0px, #fff 2px, rgba(255,255,255,0) 4px), linear-gradient(bottom, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
 }
+
+
+
+$('input:radio').screwDefaultButtons({ 
+	image: "url(images/radio.jpg)",
+	width:	 85,
+	height:	 85
+});
