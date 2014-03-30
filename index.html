@@ -22,16 +22,16 @@
     $(function(){
     
       $('input:radio').screwDefaultButtons({
-        image: 'url("img/radioSmall.jpg")',
-        width: 49,
-        height: 49,
+        image: 'url("img/radioSmall2.jpg")',
+        width: 43,
+        height: 43,
 
       });
       
       $('input:checkbox').screwDefaultButtons({
         image: 'url("img/checkboxSmall.jpg")',
-        width: 49,
-        height: 49
+        width: 43,
+        height: 43
       });
 
       
@@ -49,16 +49,16 @@
     
     .styledRadio, .styledCheckbox {
       display: inline-block;
-      border: 3px solid rgb(0, 0, 0);
+      /*border: 3px solid rgb(0, 0, 0);
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;
 border-bottom-right-radius: 10px;
-border-bottom-left-radius: 10px;
+border-bottom-left-radius: 10px; */
     }
     
     
     .example {
-      padding: 50px 0 0 20px;
+      /*padding: 50px 0 0 20px;*/
       width: 200px;
     }
     
@@ -89,8 +89,8 @@ border-bottom-left-radius: 10px;
       <div class="col-xs-12 col-sm-8 col-md-8"><center><div class="titulo"><h1>Calculadora Zabvio</h1>
       <p>Consulta el pago mensual de tú crédito es muy fácil</p></div></center></div>
       <div class="col-xs-12 col-sm-2 col-md-2">
-        <img id="botonGrafico" width="50px" style="cursor:pointer;" src="img/chart.png">
-        <img id="botonTabla" width="50px" style="cursor:pointer;" src="img/table-view.png">
+        <img id="botonGrafico" width="50px" style="cursor:pointer;" src="img/chart2.png">
+        <img id="botonTabla" width="50px" style="cursor:pointer;" src="img/table-view2.png">
       </div>
 </header>
 </div>
@@ -130,22 +130,42 @@ border-bottom-left-radius: 10px;
               <div class="example">
  
     
-    <input type="radio" name="ex1" id="ex1_a">
-    <label for="ex1_a">3 meses</label>
+              	<ul>
+              		<li>
+              			<input type="radio" name="ex1" id="ex1_a" name="edse">
+    					<label for="ex1_a">3 meses</label>
+              		</li>
+              		<li>
+              			<input type="radio" name="ex1" id="ex1_b">
+    					<label for="ex1_b">6 meses</label>
+              		</li>
+              		<li>
+              			<input type="radio" name="ex1" id="ex1_c">
+   					 	<label for="ex1_c">12 meses</label>
+              		</li>
+
+              	</ul>
+
     
-    <input type="radio" name="ex1" id="ex1_b">
+    
+    <!-- <input type="radio" name="ex1" id="ex1_b">
     <label for="ex1_b">6 meses</label>
     
     <input type="radio" name="ex1" id="ex1_c">
-    <label for="ex1_c">12 meses</label>
+    <label for="ex1_c">12 meses</label> -->
+
+    <!-- <a href="#" id="ok" class="val wide shift">Calcular</a> -->
     
+    <!-- <button type="submit" id="ok"  class="btn btn-info" script="return(false);">Calcular</button> -->
+
   </div>
 
+  <button type="submit" id="ok"  class="btn btn-info" script="return(false);">Calcular</button>
 
            <!-- <li><a href="#" id="limpiar"  class="val">C</a></li>    
             
             <li><a href="#" class="val">+</a></li> -->
-            <a href="#" id="ok" class="val wide shift">Calcular</a>
+            <!-- <a href="#" id="ok" class="val wide shift">Calcular</a> -->
             
         </ul>
 </div>

@@ -20,8 +20,8 @@ body{
 	}
 
 header{
-	width: 110%;
 	background-image:url(../img/bnner.png);
+	width:100%;
 	display:inline-block;
 	text-align:center;
 	}
