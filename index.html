@@ -9,7 +9,6 @@
 
 <title>Calculadora Zabvio</title>
 
-
 <!-- Bootstrap -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <!-- <link rel="stylesheet" href="css/style.css">  -->
@@ -74,6 +73,19 @@ border-bottom-left-radius: 10px; */
     }
   
   </style>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "http://connect.facebook.net/es_LA/all.js#xfbml=1&appId=1426194944271112";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 </head>
 
 <body>
@@ -85,14 +97,25 @@ border-bottom-left-radius: 10px; */
 
 <div class="row">
   <header style="position: fixed;z-index: 300;">
-<div class="col-xs-12 col-sm-2 col-md-2"></div>
-      <div class="col-xs-12 col-sm-8 col-md-8"><center><div class="titulo"><h1>Calculadora Zabvio</h1>
-      <p>Consulta el pago mensual de tú crédito es muy fácil</p></div></center></div>
-      <div class="col-xs-12 col-sm-2 col-md-2">
+<div class="col-xs-4 col-sm-2 col-md-2"> <img src="img/logo2.png"></div>
+      <div class="col-xs-4 col-sm-8 col-md-8">
+        
+        <div class='visible-sm visible-md visible-lg'><h1>Calculadora Zabvio</h1>
+      <!--<p>Consulta el pago mensual de tú crédito es muy fácil</p></div></center> --></div> 
+          <div class="col-xs-4 col-sm-2 col-md-2">
         <img id="botonGrafico" width="50px" style="cursor:pointer;" src="img/chart2.png">
         <img id="botonTabla" width="50px" style="cursor:pointer;" src="img/table-view2.png">
+      
+      <div class="fb-share-button" data-href="http://calculadora.zabvio.com/" data-type="button_count"></div>
+
+
       </div>
+
+
+
+
 </header>
+
 </div>
 
 		<!-- <div id="controles">
