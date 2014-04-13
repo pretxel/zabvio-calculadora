@@ -307,7 +307,13 @@ background: -webkit-linear-gradient(top, rgba(44,199,106,1) 0%, rgba(44,199,106,
  background-image: radial-gradient( 9px -4px, #FFF 0px, #fff 2px, rgba(255,255,255,0) 4px), linear-gradient(bottom, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
 }
 
+#compartir_f{
+	padding-top: 10px;
+}
 
+#compartir_t{
+	padding-top: 20px;
+}
 
 $('input:radio').screwDefaultButtons({ 
 	image: "url(images/radio.jpg)",
