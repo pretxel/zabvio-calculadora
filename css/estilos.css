@@ -230,7 +230,7 @@ background: -webkit-linear-gradient(top, rgba(44,199,106,1) 0%, rgba(44,199,106,
 
 .buttons {
      padding:0;
-     width:423px;
+     width:100%;
      margin:auto;
      overflow: hidden;
      list-style: none;
@@ -314,6 +314,10 @@ background: -webkit-linear-gradient(top, rgba(44,199,106,1) 0%, rgba(44,199,106,
 
 #compartir_t{
 	padding-top: 20px;
+}
+
+#logo{
+	padding-top: 10px;
 }
 
 $('input:radio').screwDefaultButtons({ 
