@@ -3,47 +3,57 @@ $(document).ready(function() {
 
 	$("#enviarOpinion").click(function(){
 
-			nombre = $("#nombre").val();
-			opinion = $("#opinion").val();
 
-			var parametros = {
-                        "nombre" : nombre,
-                        "opinion" : opinion
-                    };
+            if (validaOpinion()){
 
-			 $.ajax({  
-                        data:  parametros,
-                        url:   'sendMail.php',
-                        type:  'post',
-                        beforeSend: function () 
-                        {
-                                popupEsperar();
-                        },
-                        success:  function (response) 
-                        {
-                            $.unblockUI();
-                            //$("#emailSus").val('');
-                            //$("#terminos").attr('checked',false);
+    			nombre = $("#nombre").val();
+    			opinion = $("#opinion").val();
 
-                            //alert(response);
-                            //Cierro Popup Suscripción
-                            //$("#Signup").css("display", "none");
-                            //$(".modal-backdrop").css('opacity','0.0');
-                            if (response == 0)
+    			var parametros = {
+                            "nombre" : nombre,
+                            "opinion" : opinion
+                        };
+
+    			 $.ajax({  
+                            data:  parametros,
+                            url:   'sendMail.php',
+                            type:  'post',
+                            beforeSend: function () 
                             {
-                                mensajePop("Confirmación","Gracias por mandarnos tu opinión.");
+                                    popupEsperar();
+                            },
+                            success:  function (response) 
+                            {
+                                $.unblockUI();
+                                //$("#emailSus").val('');
+                                //$("#terminos").attr('checked',false);
+
+                                //alert(response);
+                                //Cierro Popup Suscripción
+                                //$("#Signup").css("display", "none");
+                                //$(".modal-backdrop").css('opacity','0.0');
+                                if (response == 0)
+                                {
+                                    mensajePop("Confirmación","Gracias por mandarnos tu opinión.");
+                                }
+                                else if (response == 1)
+                                {
+                                    mensajePop("Aviso","Upps ocurrio un problema al mandar tu opinión, intenta más tarde.");
+                                } 
+                                else if (response == 2)
+                                {
+                                    mensajePop("Aviso","No es peticion AJAX");
+                                }
+                                
+                               $('#myModal').modal('hide');
+
                             }
-                            else if (response == 1)
-                            {
-                                mensajePop("Aviso","Upps ocurrio un problema al mandar tu opinión, intenta más tarde.");
-                            } 
-                            else if (response == 2)
-                            {
-                                mensajePop("Aviso","No es peticion AJAX");
-                            }
-                            
-                        }
-                    });
+                        });
+                }
+                else
+                {
+                     mensajePop("Aviso","Por favor llene los campos.");
+                }   
 
 
 	});
@@ -80,6 +90,23 @@ function mensajePop(titulo, mensaje)
                 }
     });
 }
+
+function validaOpinion(){
+
+    nombreTxt = $("#nombre").val();
+    opinionTxt = $("#opinion").val();
+
+
+    if (nombreTxt != '' && opinionTxt != ''){
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+
+}
+
 
 });
 

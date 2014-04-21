@@ -1,18 +1,20 @@
 <?php
- 
- $nombre = $_POST['nombre'];
- $opinion = $_POST['opinion'];
+	$nombre = $_POST['nombre'];
+ 	$opinion = $_POST['opinion'];
 
+	$to = "edsel@zabvio.com";
+ 	$subject = "¡Nueva Opinion Calculadora Zabvio!";
 
- $to = "edsel@zabvio.com";
- $subject = "Hi!";
- $body = "Hi,\n\n ".$nombre." How are you?".$opinion;
+	$message = '<html><body>';
+	$message .= '<table><tr><th>Nombre</th><th>Opinión</th></tr>';
+	$message .= '<tr><td>'.$nombre.'</td><td>'.$opinion.'</td>';
+	$message .= '</table>';
 
- if (mail($to, $subject, $body)) {
-   echo 0;
-  } else {
-    echo 1;
-   }
+	$body = "Hola mi nombre es: ".$nombre." mi oponión sobre la calculadora de zabvio es la siguiente: ".$opinion;
 
-
+ 	if (mail($to, $subject, $body)) {
+	   	echo 0;
+  	} else {
+    	echo 1;
+   	}
  ?>
